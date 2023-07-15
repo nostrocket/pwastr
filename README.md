@@ -5,21 +5,21 @@
 Building frontend apps is more annoying than it could be, mostly relies on github, and code is repeated across many projects.
 
 ### Solution
-Compose frontend apps from nostr events. 
+Compose frontend apps from nostr events.
 
-Anyone can re-use anyone else's events to compose an application. Think of these events as modular micro-libraries with standardized interfaces.
+Anyone can re-use anyone else's events to compose an application. Think of these events as modular micro-libraries and micro-elements with standardized interfaces.
 
-PWAs become composed from chains or graphs of events. Chains can follow different pathways based on user input. 
+PWAs become composed from directed acyclic graphs of events. The route that is followed through the graph determines how the app is constructed for the end user. The route can be programmed but can also be driven by user action such that an application is constructed on-the-fly depending on what action the user takes.
 
-A user can select a single event and an entire PWA will be composed from the events listed in that event, but they can also compose apps in realtime based on their actions. For example when tapping a community, that community's functionality will be pulled in from events and rendered for the user.
+For example, when tapping on a community, that community's functionality will be pulled in from events and rendered for the user. Different communities might have different functionality.
 
 Instead of sending pull requests to a repository, developers simply publish events. Instead of asking a maintainer to merge a patch, the end user themselves can immediately try the newly created feature without any action by package maintainers.
 
 Users can set an amount to zap each event in the chain of events they consume. Events (functions) that are more useful to users will end up getting zapped more. This would work much the same way as V4V works on fountain etc, but for code rather than audio.
 
 ### Architecture
-- Events MUST contain exactly one Function, Style, Element, or Composition. 
-- Events MAY specify a Lightning address to recieve zaps for usage.
+- Events MUST contain exactly one Function, Style, Element, or Component. 
+- Events MAY specify a Lightning address to recieve automatic V4V zaps for usage.
 
 #### Function Events
 - Function events take inputs and produce outputs
@@ -41,8 +41,9 @@ Element events are Function events that produce exactly one DOM Element when exe
 Style events MUST contain at least one `property` and `value`.
 Style events do not need to include a `selector`. Element Events should instead include the ID of the relevant Style event and use this ID as the class. CSS Properties and Values can then be injected, using the event ID as the selector.
 
+#### Component Events
+A Component Event contains Function, Element, Style, and other Component event IDs to be compiled into a PWA by pwastr.js
+- Lisp style language
+
 #### State
 PWASTR apps MUST NOT retain any local state, but MAY cache events.
-
-#### Compositions
-A Composition Event is an ordered list of Function, Element, Style, and Composition event IDs to be compiled into a PWA by pwastr.js
