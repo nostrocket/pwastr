@@ -9,7 +9,7 @@ Compose frontend apps from nostr events.
 
 Anyone can re-use anyone else's events to compose an application. Think of these events as modular micro-libraries and micro-elements with standardized interfaces.
 
-PWAs become composed from directed acyclic graphs of events. The route that is followed through the graph determines how the app is constructed for the end user. The route can be programmed but can also be driven by user action such that an application is constructed on-the-fly depending on what action the user takes.
+PWAs become composed by following a particular route through directed acyclic graphs of events. The route that is followed through the graph determines how the app is constructed for the end user. The route can be programmed but can also be driven by user action such that an application is constructed on-the-fly depending on what action the user takes.
 
 For example, when tapping on a community, that community's functionality will be pulled in from events and rendered for the user. Different communities might have different functionality.
 
