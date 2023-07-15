@@ -1,13 +1,13 @@
 # PWASTR
 
 ### Problem
-Building frontend apps is more annoying than it could be.
+Building frontend apps is more annoying than it could be, and mostly relies on github.
 
 ### Solution
-Compose frontend apps from nostr events. Anyone can re-use anyone else's events to compose an application. PWAs become composed of chains of events. Chains can follow different pathways based on user input.
+Compose frontend apps from nostr events. Anyone can re-use anyone else's events to compose an application. PWAs become composed of chains or graphs of events. Chains can follow different pathways based on user input. A user can select a single event and an entire PWA will be composed from the events listed in that event.
 
 ### Architecture
-- Events MAY contain exactly one Function, Style, or Element. 
+- Events MAY contain exactly one Function, Style, Element, or Composition. 
 - Events MAY specify a Lightning address to recieve zaps for usage.
 
 #### Function Events
@@ -32,3 +32,6 @@ Style events do not need to include a `selector`. Element Events should instead 
 
 #### State
 PWASTR apps MUST NOT retain any local state, but MAY cache events.
+
+#### Compositions
+A Composition Event is an ordered list of Function, Element, Style, and Composition event IDs to be compiled into a PWA by pwastr.js
