@@ -2,12 +2,12 @@
 <img width="605" src="https://github.com/nostrocket/pwastr/assets/8143945/65e6bb7a-540d-4c2a-a71f-8d7a3cf63ccc" />
 
 ### Problem
-Building frontend apps is more annoying than it could be, and mostly relies on github.
+Building frontend apps is more annoying than it could be, mostly relies on github, and code is repeated across many projects.
 
 ### Solution
 Compose frontend apps from nostr events. 
 
-Anyone can re-use anyone else's events to compose an application. 
+Anyone can re-use anyone else's events to compose an application. Think of these events as modular micro-libraries with standardized interfaces.
 
 PWAs become composed from chains or graphs of events. Chains can follow different pathways based on user input. 
 
