@@ -7,8 +7,8 @@ Building frontend apps is more annoying than it could be.
 Compose frontend apps from nostr events. Anyone can re-use anyone else's events to compose an application. PWAs become composed of chains of events. Chains can follow different pathways based on user input.
 
 ### Architecture
-Events MAY contain exactly one Function, Style, or Element. 
-Events MAY specify a Lightning address to recieve zaps for usage.
+- Events MAY contain exactly one Function, Style, or Element. 
+- Events MAY specify a Lightning address to recieve zaps for usage.
 
 #### Function Events
 - Function events take inputs and produce outputs
