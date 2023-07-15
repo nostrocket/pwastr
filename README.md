@@ -22,8 +22,9 @@ Compose frontend apps from nostr events. Anyone can re-use anyone else's events 
 Element events are Function events that produce exactly one DOM Element when executed.
 
 - Element events MAY take JSON objects as inputs
-- Element events MAY take other Element events as inputs
-- Element events MAY take Style Events as inputs 
+- Element events MAY take other Element events as inputs by passing in the event ID
+- Element events MAY take Style Events as inputs by passing in the event ID
+- To produce complex elements, take multiple Element events as inputs and produce a single DOM Element as output
 
 #### Style Events
 Style events MUST contain at least one `property` and `value`.
