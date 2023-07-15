@@ -1,4 +1,5 @@
 # PWASTR
+<img width="605" src="https://github.com/nostrocket/pwastr/assets/8143945/65e6bb7a-540d-4c2a-a71f-8d7a3cf63ccc" />
 
 ### Problem
 Building frontend apps is more annoying than it could be, and mostly relies on github.
