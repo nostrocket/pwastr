@@ -11,6 +11,7 @@ Element events MUST NOT contain any element types that are not in the following 
 * H2
 * H3
 * H4
+* ...
 
 Element events MAY specify the type and number of inputs allowed. If desired, these MUST be included in a `in` tag, which is an ordered list of input types, for example:
 `["in", "elem.h1", "elem.p", "data.string", "data.string", "data.number"]`
